@@ -1,4 +1,4 @@
-package br.com.zupacademy.gabrielaviana.compartilhado;
+package br.com.zupacademy.gabrielaviana.casadocodigo.compartilhado;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,5 @@
 package br.com.zupacademy.gabrielaviana.casadocodigo.autor;
 
-import java.time.LocalDateTime;
-
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
@@ -9,12 +7,12 @@ import javax.validation.constraints.Size;
 
 public class NovoAutorForm {
 	
-	@NotEmpty
+	@NotBlank
 	private String nome;
-	@NotEmpty
+	@NotBlank
 	@Email
 	private String email;
-	@NotEmpty
+	@NotBlank
 	@Size (max = 400)
 	private String descricao;
 		
