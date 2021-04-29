@@ -5,6 +5,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+
 public class NovoAutorForm {
 	
 	@NotBlank
@@ -27,6 +28,9 @@ public class NovoAutorForm {
 	public Autor toModel() {		
 		return new Autor(nome, email, descricao);
 	
+	}
+	public String getEmail() {
+		return this.email;
 	}
 
 }
