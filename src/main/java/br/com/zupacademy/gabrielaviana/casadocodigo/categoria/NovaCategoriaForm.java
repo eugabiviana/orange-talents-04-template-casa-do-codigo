@@ -4,12 +4,14 @@ import javax.validation.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import br.com.zupacademy.gabrielaviana.casadocodigo.autor.Autor;
+import br.com.zupacademy.gabrielaviana.casadocodigo.compartilhado.UniqueValue;
+
 
 public class NovaCategoriaForm {
 
 	@NotBlank
-	private String nome;
+	@UniqueValue(domainClass = Categoria.class, fieldName = "nome")
+		private String nome;
 
 	//Getter
 	public String getNome() {
@@ -22,6 +24,7 @@ public class NovaCategoriaForm {
 		
 	}
 	
+	//Essa anotação do Json, é para corrigir um bug do Java que não cria um objeto com apenas uma variável, nesse caso, apenas o nome 
 	public NovaCategoriaForm(@JsonProperty("nome") @NotBlank String nome) {
 		this.nome = nome;
 	}

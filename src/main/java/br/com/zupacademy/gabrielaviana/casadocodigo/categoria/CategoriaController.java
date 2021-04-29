@@ -24,9 +24,9 @@ public class CategoriaController {
 		Optional<Categoria> talvezCategoria = categoriaRepository.findByNome(form.getNome());	
 		
 		//checagem de nome de categoria existente
-		if(talvezCategoria.isPresent()) {
-			return ResponseEntity.badRequest().build();
-		}
+//		if(talvezCategoria.isPresent()) {
+//			return ResponseEntity.badRequest().build();
+//		} virou comentário por causa da @UniqueValue
 		
 		categoriaRepository.save(categoria);		
 		

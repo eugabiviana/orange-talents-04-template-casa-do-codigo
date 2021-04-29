@@ -40,9 +40,9 @@ public class AutorController {
 		Optional<Autor> talvezAutor = autorRepository.findByEmail(form.getEmail());	
 		
 		//checagem de email existente
-		if(talvezAutor.isPresent()) {
-			return ResponseEntity.badRequest().build();
-		}
+//		if(talvezAutor.isPresent()) {
+//			return ResponseEntity.badRequest().build();
+//		}virou comentário por causa da @UniqueValue
 		
 		autorRepository.save(autor);		
 		

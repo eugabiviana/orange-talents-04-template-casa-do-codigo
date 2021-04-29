@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
+import br.com.zupacademy.gabrielaviana.casadocodigo.compartilhado.UniqueValue;
+
 @Entity
 public class Categoria {
 
@@ -13,7 +15,7 @@ public class Categoria {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotBlank
+	@NotBlank	
 	private String nome;
 	
 

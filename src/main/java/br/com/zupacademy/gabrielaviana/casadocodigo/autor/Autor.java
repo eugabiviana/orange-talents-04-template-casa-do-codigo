@@ -22,7 +22,7 @@ public class Autor {
 	@NotEmpty
 	private String nome;
 	@NotEmpty
-	@Email
+	@Email	
 	private String email;
 	@NotEmpty
 	@Size (max = 400)

@@ -5,6 +5,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+import br.com.zupacademy.gabrielaviana.casadocodigo.compartilhado.UniqueValue;
+
 
 public class NovoAutorForm {
 	
@@ -12,6 +14,7 @@ public class NovoAutorForm {
 	private String nome;
 	@NotBlank
 	@Email
+	@UniqueValue(domainClass = Autor.class, fieldName = "email")//essa condição é colocada no request, para que já saiba da restrição
 	private String email;
 	@NotBlank
 	@Size (max = 400)
