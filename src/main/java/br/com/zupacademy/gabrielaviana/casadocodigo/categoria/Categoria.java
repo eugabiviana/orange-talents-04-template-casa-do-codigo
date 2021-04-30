@@ -38,6 +38,5 @@ public class Categoria {
 	public Categoria(@NotBlank String nome) {
 		this.nome = nome;
 	}
-
 		
 }
