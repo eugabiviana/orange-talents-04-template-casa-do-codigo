@@ -15,6 +15,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 
 import br.com.zupacademy.gabrielaviana.casadocodigo.autor.Autor;
@@ -49,8 +50,10 @@ public class Livro {
 	@NotBlank
 	private String isbn;
 	
+	@NotNull
 	@Future
-	@JsonFormat(pattern="dd/MM/yyyy", shape = Shape.STRING)
+	@JsonIgnoreProperties(value = {"dataPublicacao"}, ignoreUnknown = true, allowSetters = true)
+	@JsonFormat(pattern="dd/MM/yyyy", shape = Shape.STRING)	
 	private Date dataPublicacao;
 	
 	

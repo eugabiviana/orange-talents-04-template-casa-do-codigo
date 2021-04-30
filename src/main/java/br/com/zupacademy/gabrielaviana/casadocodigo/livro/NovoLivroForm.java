@@ -12,6 +12,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import br.com.zupacademy.gabrielaviana.casadocodigo.autor.Autor;
@@ -47,7 +48,7 @@ public class NovoLivroForm {
 	@NotNull
 	@Future
 	@JsonIgnoreProperties(value = {"dataPublicacao"}, ignoreUnknown = true, allowSetters = true)
-	//@JsonFormat(pattern="dd/MM/yyyy", shape = JsonFormat.Shape.STRING)	
+	@JsonFormat(pattern="dd/MM/yyyy", shape = JsonFormat.Shape.STRING)	
 	private Date dataPublicacao;
 
 	@NotNull
