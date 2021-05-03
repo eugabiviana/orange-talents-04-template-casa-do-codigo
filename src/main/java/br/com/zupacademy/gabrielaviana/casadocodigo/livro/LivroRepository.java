@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
 public interface LivroRepository extends JpaRepository<Livro, Long>{
 
 	Optional<Livro> findById(Long id);
-		
+
 }
